@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-cloud-order" />
+        <module name="spring-cloud-stock" />
+        <module name="springcloudlcn" />
+        <module name="spring-cloud-eureka" />
+        <module name="txlcn-tm" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="springcloud-lcn" target="1.8" />
+      <module name="txlcn-demo" target="1.5" />
+      <module name="txlcn-demo-common" target="1.8" />
+      <module name="txlcn-demo-tm" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="spring-cloud-eureka" options="-parameters" />
+      <module name="spring-cloud-order" options="-parameters" />
+      <module name="spring-cloud-stock" options="-parameters" />
+      <module name="springcloud-lcn" options="-parameters" />
+      <module name="springcloudlcn" options="-parameters" />
+      <module name="txlcn-demo-common" options="-parameters" />
+      <module name="txlcn-demo-tm" options="-parameters" />
+      <module name="txlcn-tm" options="-parameters" />
+    </option>
+  </component>
+</project>

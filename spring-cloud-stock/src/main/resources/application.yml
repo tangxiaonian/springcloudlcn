@@ -1,0 +1,37 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: spring-cloud-stock-8083
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test02?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: 721000
+    hikari:
+      minimum-idle: 5
+      idle-timeout: 600000
+      maximum-pool-size: 10
+      auto-commit: true
+      pool-name: MyHikariCP
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+eureka:
+  client:
+    #    5秒抓取一次     
+    registry-fetch-interval-seconds: 5
+    service-url:
+      defaultZone: http://localhost:80/eureka/  # 服务端地址
+  instance:
+    instance-id: spring-cloud-stock-8083
+    prefer-ip-address: true #访问路径显示ip
+
+mybatis:
+  mapper-locations: /mapper/*.xml
+
+tx-lcn:
+  client:
+    manager-address: 127.0.0.1:8070
